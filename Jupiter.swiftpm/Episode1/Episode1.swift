@@ -9,12 +9,20 @@ import SwiftUI
 
 struct Episode1: View {
     var body: some View {
-        Text("Episode 1 View")
+        VStack {
+            Spacer()
+            Rectangle()
+                .textField("   대망의 첫 CBL,\n첫 MC1 시작이다.")
+        }
     }
 }
+    
+
 
 struct Episode1_Previews: PreviewProvider {
     static var previews: some View {
-        Episode1()
+        NavigationView {
+            Episode1()
+        }
     }
 }
