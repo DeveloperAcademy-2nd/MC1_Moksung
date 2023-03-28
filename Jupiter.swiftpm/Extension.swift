@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+extension Color {
+    static var backgroundColor: Color {
+        return Color(uiColor: UIColor(red: 41/255, green: 41/255, blue: 41/255, alpha: 1.0))
+        /* #292929 */
+    }
+}
+
 extension Rectangle {
     func textField(_ text: String) -> some View {
         self
@@ -23,7 +30,7 @@ extension Rectangle {
                             .font(.system(size: 40))
                             .lineLimit(nil)
                             .padding(.all, 40)
-                    }   
             }
+        }
     }
 }

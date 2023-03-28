@@ -14,6 +14,7 @@ struct Episode1: View {
             Rectangle()
                 .textField("   대망의 첫 CBL,\n첫 MC1 시작이다.")
         }
+        .background(Color.backgroundColor)
     }
 }
     
