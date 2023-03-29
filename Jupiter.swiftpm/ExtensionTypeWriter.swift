@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-
+// typeWriter 효과를 주고싶으면 코지의 Rectangle... 부분에서 textField 를 typeWriterField 로 바꾸기만 하면 됩니다 :)
 extension Rectangle {
-    func typeWriteField(_ text: String) -> some View {
+    func typeWriterField(_ text: String) -> some View {
         self
             .foregroundColor(.white)
             .frame(height: 300)
