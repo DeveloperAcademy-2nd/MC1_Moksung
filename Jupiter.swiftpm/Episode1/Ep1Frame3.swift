@@ -8,9 +8,35 @@
 import SwiftUI
 
 struct Ep1Frame3: View {
+    @State var tag:Int? = nil
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        
+        ZStack {
+            Image("1-3")
+            VStack {
+                Spacer()
+                HStack{
+                    Spacer()
+                    NavigationLink(
+                        destination: Ep1Frame4(), tag : 1, selection: self.$tag){}
+                    
+                    
+                    Button("다음"){
+                        self.tag = 1
+                    }.padding(.bottom, 160)
+                    .padding(.trailing,50)
+                    
+                    
+                }       // HStack
+                
+            }   //vstack
+               
+            
+        }           // zstack
+        .ignoresSafeArea(.all)
+        .background(Color.backgroundColor)
+        
+    }   // body
 }
 
 struct Ep1Frame3_Previews: PreviewProvider {

@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct Ep1Frame15: View {
+    @State var tag:Int? = nil
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        
+        ZStack{
+            Color.backgroundColor.ignoresSafeArea()
+            Image("1-15")
+            
+        }
+    .ignoresSafeArea(.all)
+    .background(Color.backgroundColor)
+    
+}   // body
 }
 
 struct Ep1Frame15_Previews: PreviewProvider {
