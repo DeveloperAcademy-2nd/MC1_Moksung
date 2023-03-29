@@ -12,19 +12,41 @@ import SwiftUI
 extension Rectangle {
     func typeWriterField(_ text: String) -> some View {
         self
+//            .foregroundColor(.white)
+//            .frame(height: 300)
+//            .padding(.all, 20)
+//            .overlay(alignment: .center) {
+//                Rectangle()
+//                    .border(.black)
+//                    .padding(.all, 30)
+//                    .foregroundColor(.white)
+//                    .overlay(alignment: .center) {
+//                        TyperWriterView(finalText: text)
+//                            .font(.system(size: 40))
+//                            .lineLimit(nil)
+//                            .padding(.all, 40)
             .foregroundColor(.white)
             .frame(height: 300)
-            .padding(.all, 20)
+            .padding(.leading, 20)
+            .padding(.trailing, 20)
+            .padding(.bottom, 90)
             .overlay(alignment: .center) {
                 Rectangle()
                     .border(.black)
-                    .padding(.all, 30)
+                    .padding(.bottom, 100)
+                    .padding(.leading, 30)
+                    .padding(.trailing, 30)
+                    .padding(.top, 10)
                     .foregroundColor(.white)
                     .overlay(alignment: .center) {
                         TyperWriterView(finalText: text)
                             .font(.system(size: 40))
                             .lineLimit(nil)
-                            .padding(.all, 40)
+                            .multilineTextAlignment(.center)
+                            .padding(.bottom, 100)
+                            .padding(.leading, 30)
+                            .padding(.trailing, 30)
+                            .padding(.top, 10)
             }
         }
     }
