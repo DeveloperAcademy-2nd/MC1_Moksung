@@ -32,7 +32,7 @@ extension Rectangle {
                     .foregroundColor(.white)
                     .overlay(alignment: .center) {
                         Text(text)
-                            .font(.system(size: 40))
+                            .font(.system(size: 30))
                             .lineLimit(nil)
                             .multilineTextAlignment(.center)
                             .padding(.bottom, 100)
