@@ -17,7 +17,7 @@ extension Color {
 extension Rectangle {
     func textField(_ text: String) -> some View {
         self
-            .foregroundColor(.gray)
+            .foregroundColor(.white)
             .frame(height: 300)
             .padding(.all, 20)
             .overlay(alignment: .center) {

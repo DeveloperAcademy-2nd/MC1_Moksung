@@ -5,11 +5,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView {
+                Introduce().tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Introduce")
+                }
                 Episode1().tabItem {
                     Image(systemName: "person.fill")
                     Text("Episode 1")
                 }
-                
                 Episode2().tabItem {
                     Image(systemName: "person.fill")
                     Text("Episode 2")
