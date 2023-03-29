@@ -16,55 +16,45 @@ struct Ep3Frame1: View {
     ]
     
     @State var index = 0
-    @State var frameFinish = false
     
     var body: some View {
-        
-        if !frameFinish {
-            ZStack {
-                Button {
-                    if index != 0 {
-                        withAnimation(.easeOut) {
-                            index -= 1
-                        }
+        ZStack {
+            Button {
+                if index != 0 {
+                    withAnimation(.easeOut) {
+                        index -= 1
                     }
-                } label: {
-                    Image(design[index].image)
                 }
-                
-                    VStack {
-                        Spacer()
-                        Rectangle()
-                            .textField(design[index].subtitle)
-                            .overlay {
-                                VStack {
+            } label: {
+                Image(design[index].image)
+            }
+                VStack {
+                    Spacer()
+                    Rectangle()
+                        .textField(design[index].subtitle)
+                        .overlay {
+                            VStack {
+                                HiddenNavigationLink(destinationView: Ep3Frame2())
+                                Spacer()
+                                HStack {
                                     Spacer()
-                                    HStack {
-                                        Spacer()
-                                        Button("NEXT") {
-                                            withAnimation(.easeIn) {
-                                                if index < design.count - 1{
-                                                    index += 1
-                                                } else {
-                                                    frameFinish = true
-                                                }
+                                    Button("NEXT") {
+                                        withAnimation(.easeIn) {
+                                            if index < design.count - 1{
+                                                index += 1
                                             }
                                         }
-                                        .frame(width: 50, height: 30)
-                                        .padding(.bottom, 100)
-                                        .padding(.trailing, 35)
-
-                            }
+                                    }
+                                    .frame(width: 50, height: 30)
+                                    .padding(.bottom, 100)
+                                    .padding(.trailing, 35)
                         }
                     }
                 }
             }
-            .background(Color.backgroundColor)
-            .ignoresSafeArea(.all)
         }
-        else {
-            Ep3Frame2()
-        }
+        .background(Color.backgroundColor)
+        .ignoresSafeArea(.all)
     }
 }
 
@@ -79,4 +69,23 @@ struct Design: Identifiable {
     let id = UUID().uuidString
     let image: String
     let subtitle: String
+}
+
+struct HiddenNavigationLink<Desination: View>: View {
+    
+    let destinationView: Desination
+    
+    var body: some View {
+        HStack {
+            Spacer()
+            NavigationLink {
+                destinationView
+            } label: {
+                Text("   ")
+                    .background(.black)
+                    .opacity(0)
+            }
+            .frame(width: 65, height: 50)
+        }
+    }
 }
