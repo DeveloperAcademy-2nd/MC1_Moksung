@@ -9,12 +9,13 @@ import SwiftUI
 
 struct Episode3: View {
     var body: some View {
-        NavigationLink {
-            Ep3Frame1()
-        } label: {
-            Text("NEXT")
+        NavigationView {
+            NavigationLink {
+                Ep3Frame1()
+            } label: {
+                Text("NEXT")
+            }
         }
-
     }
 }
 
@@ -23,6 +24,5 @@ struct Episode3_Previews: PreviewProvider {
         NavigationView {
             Episode3()
         }
-        
     }
 }
