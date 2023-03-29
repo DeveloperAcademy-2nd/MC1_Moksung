@@ -9,12 +9,20 @@ import SwiftUI
 
 struct Episode3: View {
     var body: some View {
-        Text("Episode 3 View")
+        NavigationLink {
+            Ep3Frame1()
+        } label: {
+            Text("NEXT")
+        }
+
     }
 }
 
 struct Episode3_Previews: PreviewProvider {
     static var previews: some View {
-        Episode3()
+        NavigationView {
+            Episode3()
+        }
+        
     }
 }
