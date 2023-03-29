@@ -9,11 +9,25 @@ import SwiftUI
 
 struct Ep3Frame4: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 30) {
+//            Color.white
+            Spacer()
+            Image("Frame5")
+                .resizable()
+                .frame(height: 275)
+                .frame(maxWidth: .infinity)
+            Text("The End")
+                .font(.system(size: 40))
+                .foregroundColor(.white)
+            Spacer()
+        }
+        .background(Color.backgroundColor)
+        .ignoresSafeArea(.all)
+        
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct Ep4Frame4_Previews: PreviewProvider {
     static var previews: some View {
         Ep3Frame4()
     }
