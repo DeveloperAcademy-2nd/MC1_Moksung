@@ -16,18 +16,16 @@ struct Ep3Frame1: View {
     ]
     
     @State var index = 0
-    @State var hideButton = false
-    @State var thisEPFinish = false
+    @State var frameFinish = false
     
     var body: some View {
         
-        if !thisEPFinish {
+        if !frameFinish {
             ZStack {
                 Button {
                     if index != 0 {
                         withAnimation(.easeOut) {
                             index -= 1
-                            hideButton = false
                         }
                     }
                 } label: {
@@ -43,20 +41,18 @@ struct Ep3Frame1: View {
                                     Spacer()
                                     HStack {
                                         Spacer()
-                                        // button 클릭될 경우 text 변하도록 설정
                                         Button("NEXT") {
                                             withAnimation(.easeIn) {
                                                 if index < design.count - 1{
                                                     index += 1
                                                 } else {
-                                                    thisEPFinish = true
+                                                    frameFinish = true
                                                 }
                                             }
                                         }
                                         .frame(width: 50, height: 30)
                                         .padding(.bottom, 100)
                                         .padding(.trailing, 35)
-                                        .opacity(hideButton ? 0 : 1)
 
                             }
                         }
@@ -69,24 +65,12 @@ struct Ep3Frame1: View {
         else {
             Ep3Frame2()
         }
-//                                    if index == design.count - 1 {
-//                                        NavigationLink {
-//                                            Ep3Frame2()
-//                                        } label: {
-//                                            Text("NEXT")
-//                                        }
-//                                        .frame(width: 50, height: 30)
-//                                        .padding(.bottom, 100)
-//                                        .padding(.trailing, 35)
-//                            }
-//        .navigationBarBackButtonHidden(true)
     }
 }
 
 
 struct Ep3Frame1_Previews: PreviewProvider {
     static var previews: some View {
-
         Ep3Frame1()
     }
 }
