@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-struct Ep3Frame1: View {
+struct Ep3Frame3: View {
     
     @State var design: [Design] = [
-        Design(image: "Frame1", subtitle: "우리는 전투를 끝내고, 회식을 진행했다. 1차는 맘스터치였다."),
-        Design(image: "Frame2", subtitle: "서로 고생했다며 이야기를 이어가는 중에, 우리는 평소처럼 유사과학 이야기를 진행했다."),
-        Design(image: "Frame3", subtitle: "섀넌은 갑자기 '딸은 아버지를 닮고, 아들은 어머니를 닮는대요. 제가 그 증거에요!' 라고 했다.")
+        Design(image: "Frame4", subtitle: "모두가 뒤집어졌다. 우리는 이어서, 플러팅 관련 이야기를 나눴다."),
+        Design(image: "Frame1", subtitle: "목성 최균함은(는) 플러팅 기술 '아버지가 잘생기셨나봐요.'\n을(를) 획득했다.")
     ]
     
     @State var index = 0
@@ -26,7 +25,15 @@ struct Ep3Frame1: View {
                     }
                 }
             } label: {
-                Image(design[index].image)
+                if index == 0 {
+                    VStack {
+                        Image(design[index].image)
+                            .padding(.top, 130)
+                        Spacer()
+                    }
+                } else {
+                    Image(design[index].image)
+                }
             }
                 VStack {
                     Spacer()
@@ -34,7 +41,7 @@ struct Ep3Frame1: View {
                         .textField(design[index].subtitle)
                         .overlay {
                             VStack {
-                                HiddenNavigationLink(destinationView: Ep3Frame2())
+                                HiddenNavigationLink(destinationView: Ep3Frame4())
                                 Spacer()
                                 HStack {
                                     Spacer()
@@ -58,34 +65,8 @@ struct Ep3Frame1: View {
     }
 }
 
-
-struct Ep3Frame1_Previews: PreviewProvider {
+struct Ep3Frame3_Previews: PreviewProvider {
     static var previews: some View {
-        Ep3Frame1()
-    }
-}
-
-struct Design: Identifiable {
-    let id = UUID().uuidString
-    let image: String
-    let subtitle: String
-}
-
-struct HiddenNavigationLink<Desination: View>: View {
-    
-    let destinationView: Desination
-    
-    var body: some View {
-        HStack {
-            Spacer()
-            NavigationLink {
-                destinationView
-            } label: {
-                Text("   ")
-                    .background(.black)
-                    .opacity(0)
-            }
-            .frame(width: 65, height: 50)
-        }
+        Ep3Frame3()
     }
 }
