@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Ep1Frame1: View {
-    @State var subtitle = "대망의 첫 CBL,첫 MC1 시작이다."
+    @State var subtitle = "대망의 첫 CBL,\n첫 MC1 시작이다."
     @State var tag:Int? = nil
     var body: some View {
         
@@ -17,7 +17,7 @@ struct Ep1Frame1: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .textField(subtitle)
+                    .typeWriterField(subtitle)
                     .multilineTextAlignment(.center)
                     .overlay {
                         VStack {

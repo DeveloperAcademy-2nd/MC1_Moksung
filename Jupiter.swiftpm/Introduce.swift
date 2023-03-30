@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Introduce: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image("Title") // 너무 성의 없나 ㅎㅎ.. -Musk-
     }
 }
 

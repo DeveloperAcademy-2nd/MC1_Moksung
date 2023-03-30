@@ -18,7 +18,7 @@ struct Ep1Frame2: View {
                 Spacer()
                     ZStack{
                     Rectangle()
-                        .textField(subtitle)
+                        .typeWriterField(subtitle)
                         .multilineTextAlignment(.center)
                         .overlay {
                             VStack {

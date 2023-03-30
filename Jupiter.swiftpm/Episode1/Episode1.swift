@@ -11,10 +11,19 @@ import AVKit
 struct Episode1: View {
     var body: some View {
         NavigationView(){
-            NavigationLink(destination: Ep1Frame1(),
-                           label: {
-                Text("Next")
-            })
+            ZStack{
+                Image("1-main")
+                    .background(Color.black)
+                    .ignoresSafeArea(.all)
+                HStack{
+                    Spacer()
+                    NavigationLink(destination: Ep1Frame1(),
+                                   label: {
+                        Text("다음")
+                    })
+                    
+                }
+            }   //ZStack
             
         }   // navigationview
         
