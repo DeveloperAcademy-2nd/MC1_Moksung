@@ -13,7 +13,10 @@ struct Episode3: View {
             NavigationLink {
                 Ep3Frame1()
             } label: {
-                Text("NEXT")
+                Image("Episode3")
+                    .padding(.top, 36)
+//                    .background(Color.backgroundColor)
+//                    .ignoresSafeArea(.all)
             }
         }
     }

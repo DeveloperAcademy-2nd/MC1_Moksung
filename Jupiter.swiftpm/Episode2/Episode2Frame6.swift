@@ -35,6 +35,7 @@ struct Episode2Frame6: View {
                                 Spacer()
                                 // button 클릭될 경우 text 변하도록 설정
                                 NavigationLink {
+                                    Ep2Frame7()
                                     
                                 } label: {
                                     Label("NEXT", systemImage: "arrow")

@@ -11,6 +11,7 @@ struct ContentView: View {
                 }
                 Episode1().tabItem {
                     Image(systemName: "person.fill")
+                        .foregroundColor(.white)
                     Text("Episode 1")
                 }
                 Episode2().tabItem {
