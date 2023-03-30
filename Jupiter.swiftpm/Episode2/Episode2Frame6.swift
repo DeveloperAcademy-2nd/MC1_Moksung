@@ -60,6 +60,12 @@ struct Episode2Frame6: View {
         }
         .background(Color.backgroundColor)
         .ignoresSafeArea(.all)
+        .onAppear(perform: playSoundEP2Frame6)
+        .onDisappear(perform: SoundSetting.soundPlayer.stop)
+    }
+    
+    func playSoundEP2Frame6() {
+        SoundSetting.soundPlayer.play(fileName: "celebrate6")
     }
 }
 

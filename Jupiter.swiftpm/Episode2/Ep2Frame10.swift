@@ -31,6 +31,7 @@ struct Ep2Frame10: View {
                                         Button("장면 \(count+1)/4"){
                                                 self.tag = 1
                                                 count += 1
+                                            SoundSetting.soundPlayer.play(fileName: "swoosh10")
                                         }.padding(.top, 60)
                                             .padding(.trailing,50)
                                     }       // HStack

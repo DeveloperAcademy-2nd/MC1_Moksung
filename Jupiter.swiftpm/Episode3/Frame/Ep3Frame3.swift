@@ -42,6 +42,7 @@ struct Ep3Frame3: View {
                                             if index < design.count - 1{
                                                 index += 1
                                             }
+                                            SoundSetting.soundPlayer.play(fileName: "levelup")
                                         }
                                     }
                                     .frame(width: 50, height: 30)

@@ -18,8 +18,13 @@ struct Ep1Frame15: View {
         }
     .ignoresSafeArea(.all)
     .background(Color.backgroundColor)
+    .onAppear(perform: soundPlayEp1Frame15)
+    .onDisappear(perform: SoundSetting.soundPlayer.stop)
     
 }   // body
+    func soundPlayEp1Frame15() {
+        SoundSetting.soundPlayer.play(fileName: "cafebene15")
+    }
 }
 
 struct Ep1Frame15_Previews: PreviewProvider {

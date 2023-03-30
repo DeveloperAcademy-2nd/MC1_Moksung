@@ -31,9 +31,15 @@ struct Ep1Frame12: View {
                 
             }   //vstack
         }           // zstack
+        .onAppear(perform: soundPlayEp1Frame12)
+        .onDisappear(perform: SoundSetting.soundPlayer.stop)
 
         
     }   // body
+    
+    func soundPlayEp1Frame12() {
+        SoundSetting.soundPlayer.play(fileName: "taecho12")
+    }
 }
 
 struct Ep1Frame12_Previews: PreviewProvider {

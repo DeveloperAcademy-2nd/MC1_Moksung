@@ -39,6 +39,7 @@ struct Episode2Frame1: View {
                                         withAnimation {
                                             index += 1
                                         }
+                                        SoundSetting.soundPlayer.stop()
                                     } label: {
                                         Text("장면 \(index+1)/\(images.count)")
                                     }
@@ -61,6 +62,12 @@ struct Episode2Frame1: View {
         }
         .background(Color.backgroundColor)
         .ignoresSafeArea(.all)
+        .onAppear(perform: playSoundEp2Frame1)
+        .onDisappear(perform: SoundSetting.soundPlayer.stop)
+    }
+    
+    func playSoundEp2Frame1() {
+        SoundSetting.soundPlayer.play(fileName: "typewriter1")
     }
 }
 struct Episode2Frame1_Previews: PreviewProvider {

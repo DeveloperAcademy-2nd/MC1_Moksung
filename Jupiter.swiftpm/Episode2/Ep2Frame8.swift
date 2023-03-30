@@ -40,6 +40,14 @@ struct Ep2Frame8: View {
         }           // zstack
         .ignoresSafeArea(.all)
         .background(Color.backgroundColor)
+        .onAppear(perform: playSoundEp2Frame8)
+        .onDisappear(perform: SoundSetting.soundPlayer.stop)
+    }
+    func playSoundEp2Frame8() {
+        SoundSetting.soundPlayer.play(fileName: "cold8")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.4) {
+            SoundSetting.soundPlayer.stop()
+        }
     }
 }
 

@@ -42,6 +42,7 @@ struct Ep1Frame10: View {
         }           // zstack
         .ignoresSafeArea(.all)
         .background(Color.backgroundColor)
+        .onDisappear(perform: SoundSetting.soundPlayer.stop)
         
     }   // body
 }
