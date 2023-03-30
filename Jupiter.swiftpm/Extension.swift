@@ -19,9 +19,9 @@ extension Rectangle {
         self
             .foregroundColor(.white)
             .frame(height: 300)
+            .padding(.bottom, 90)
             .padding(.leading, 20)
             .padding(.trailing, 20)
-            .padding(.bottom, 90)
             .overlay(alignment: .center) {
                 Rectangle()
                     .border(.black)
@@ -34,6 +34,7 @@ extension Rectangle {
                         Text(text)
                             .font(.system(size: 40))
                             .lineLimit(nil)
+
                             .multilineTextAlignment(.center)
                             .padding(.bottom, 100)
                             .padding(.leading, 30)
