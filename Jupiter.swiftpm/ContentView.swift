@@ -14,7 +14,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                     Text("Episode 1")
                 }
-                SoundTestView().tabItem {
+                Episode2Frame0().tabItem {
                     Image(systemName: "person.fill")
                     Text("Episode 2")
                 }
