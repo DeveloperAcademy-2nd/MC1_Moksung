@@ -52,8 +52,11 @@ struct Ep1Frame9: View {
         }           // zstack
         .ignoresSafeArea(.all)
         .background(Color.backgroundColor)
-        
+        .onAppear(perform: playSoundEp1Frame9)
     }   // body
+    func playSoundEp1Frame9() {
+        SoundSetting.soundPlayer.play(fileName: "battlesound9_11")
+    }
 }
 
 struct Ep1Frame9_Previews: PreviewProvider {

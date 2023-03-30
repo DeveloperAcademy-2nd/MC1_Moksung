@@ -59,6 +59,12 @@ struct Episode2Frame3: View {
         }
         .background(Color.backgroundColor)
         .ignoresSafeArea(.all)
+        .onAppear(perform: playSoundEp2Frame3)
+        .onDisappear(perform: SoundSetting.soundPlayer.stop)
+    }
+    
+    func playSoundEp2Frame3() {
+        SoundSetting.soundPlayer.play(fileName: "tiktok3")
     }
 }
 

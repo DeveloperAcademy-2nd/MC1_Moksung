@@ -71,7 +71,8 @@ struct Ep3Frame2: View {
                                             }
                                         }
                                     }
-                                    
+                                    playSoundEp3Frame2()
+                                                                        
                                 }, label: {
                                     Text("NEXT")
                                 })
@@ -85,7 +86,13 @@ struct Ep3Frame2: View {
         }
         .background(Color.backgroundColor)
         .ignoresSafeArea(.all)
+        .onAppear(perform: playSoundEp3Frame2)
+        .onDisappear(perform: SoundSetting.soundPlayer.stop)
 
+    }
+    func playSoundEp3Frame2() {
+        SoundSetting.soundPlayer.stop()
+        SoundSetting.soundPlayer.play(fileName: "voice3")
     }
 }
 

@@ -25,6 +25,12 @@ struct Ep2Frame13: View {
         }           // zstack
         .ignoresSafeArea(.all)
         .background(Color.backgroundColor)
+        .onAppear(perform: playSoundEp2Frame13)
+        .onDisappear(perform: SoundSetting.soundPlayer.stop)
+    }
+    
+    func playSoundEp2Frame13() {
+        SoundSetting.soundPlayer.play(fileName: "ending13")
     }
 }
 

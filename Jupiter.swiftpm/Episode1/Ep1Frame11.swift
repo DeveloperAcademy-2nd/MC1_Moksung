@@ -11,6 +11,8 @@ struct Ep1Frame11: View {
     @State var subtitle = "목성 최균함는(은)는\n눈 앞이 깜깜해졌다..."
     @State var transitionView: Double = 1.0
     @State var tag:Int? = nil
+    @State private var buttonDisabled = true
+    
     var body: some View {
         
         ZStack {
@@ -34,6 +36,7 @@ struct Ep1Frame11: View {
                                     self.tag = 1
                                 }.padding(.top, 60)
                                     .padding(.trailing,50)
+                                    .disabled(buttonDisabled)
                                 
                                 
                             }
@@ -44,9 +47,15 @@ struct Ep1Frame11: View {
             
         }           // zstack
         .onAppear(perform: {
-            transitionView = 0.0})
+            transitionView = 0.0
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                buttonDisabled.toggle()
+                SoundSetting.soundPlayer.play(fileName: "rewind11")
+            }
+        })
         .ignoresSafeArea(.all)
         .background(Color.backgroundColor)
+        .onDisappear(perform: SoundSetting.soundPlayer.stop)
         
     }   // body
 }

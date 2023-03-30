@@ -41,8 +41,13 @@ struct Ep1Frame5: View {
         }           // zstack
         .ignoresSafeArea(.all)
         .background(Color.backgroundColor)
+        .onAppear(perform: playSoundEP1Frame5)
         
     }   // body
+    
+    func playSoundEP1Frame5() {
+        SoundSetting.soundPlayer.play(fileName: "reeo5")
+    }
 }
 
 struct Ep1Frame5_Previews: PreviewProvider {

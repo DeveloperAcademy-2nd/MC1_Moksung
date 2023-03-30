@@ -59,8 +59,13 @@ struct Ep1Frame6: View {
         }           // zstack
         .ignoresSafeArea(.all)
         .background(Color.backgroundColor)
+        .onAppear(perform: playSoundEp1Frame6)
+        .onDisappear(perform: SoundSetting.soundPlayer.stop)
         
     }   // body
+    func playSoundEp1Frame6() {
+        SoundSetting.soundPlayer.play(fileName: "voice3")
+    }
 }
 
 struct Ep1Frame6_Previews: PreviewProvider {

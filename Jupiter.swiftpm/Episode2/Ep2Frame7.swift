@@ -30,7 +30,7 @@ struct Ep2Frame7: View {
                                 VStack {
                                     HStack{
                                         Spacer()
-                                        Button("장면 \(count+1) / 장면 2"){
+                                        Button("장면 \(count+1) / 2"){
                                                 self.tag = 1
                                                 count += 1
                                         }.padding(.top, 60)
@@ -41,6 +41,8 @@ struct Ep2Frame7: View {
                     }
                 }        .ignoresSafeArea(.all)
                     .background(Color.backgroundColor)
+                    .onAppear(perform: playSoundEp2Frame7)
+                    
             }else{
                 ZStack{
                     Image("image_EP2_7")
@@ -66,9 +68,15 @@ struct Ep2Frame7: View {
                             }   //vstack
                         }       // overlay
                 }
-            }        .ignoresSafeArea(.all)
+            }
+                .ignoresSafeArea(.all)
                 .background(Color.backgroundColor)
+                
+                
         }
+    }
+    func playSoundEp2Frame7() {
+        SoundSetting.soundPlayer.play(fileName: "letsgo7")
     }
 }
     

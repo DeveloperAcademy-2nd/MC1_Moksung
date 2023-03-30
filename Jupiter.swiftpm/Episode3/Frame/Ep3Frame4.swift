@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Ep3Frame4: View {
+    @State private var animationValue = 0
+    
     var body: some View {
         VStack(spacing: 30) {
 //            Color.white
@@ -23,7 +25,12 @@ struct Ep3Frame4: View {
         }
         .background(Color.backgroundColor)
         .ignoresSafeArea(.all)
-        
+        .onAppear(perform: playSoundEp3Frame4)
+        .onDisappear(perform: SoundSetting.soundPlayer.stop)
+    }
+    
+    func playSoundEp3Frame4() {
+        SoundSetting.soundPlayer.play(fileName: "ending4")
     }
 }
 
