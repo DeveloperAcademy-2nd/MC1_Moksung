@@ -11,34 +11,39 @@ import AVKit
 struct Ep1Frame9: View {
     @State var subtitle = "야생의 링고-사야(이)가 피드백을 걸어왔다!"
     @State var tag:Int? = nil
+    @State private var index = 0
     
-    
+    let images = ["1-9-1", "1-9-2"]
     var body: some View {
         
         ZStack {
-            Image("1-9")
+            Image(images[index])
+                .animation(.easeIn, value: index)
+            
             VStack {
                 Spacer()
                 Rectangle()
                     .typeWriterField(subtitle)
                     .multilineTextAlignment(.center)
                     .overlay {
-                        VStack {
                             HStack{
                                 Spacer()
                                 NavigationLink(
                                     destination: Ep1Frame10(), tag : 1, selection: self.$tag){}
                                 
                                 
-                                Button("다음"){
-                                    self.tag = 1
+                                Button("다음\(index+1)/\(images.count)"){
+                                    if(index == images.count-1){
+                                        self.tag = 1
+                                    } else {
+                                        index += 1
+                                    }
                                 }.padding(.top, 60)
                                 .padding(.trailing,50)
                                 
                                 
                             }       // HStack
                             
-                        }   //vstack
                 }       // overlay
 
                 

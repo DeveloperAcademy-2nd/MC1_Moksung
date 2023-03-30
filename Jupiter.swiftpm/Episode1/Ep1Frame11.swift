@@ -20,7 +20,6 @@ struct Ep1Frame11: View {
                     .typeWriterField(subtitle)
                     .multilineTextAlignment(.center)
                     .overlay {
-                        VStack {
                             HStack{
                                 Spacer()
                                 NavigationLink(
@@ -30,12 +29,10 @@ struct Ep1Frame11: View {
                                 Button("다음"){
                                     self.tag = 1
                                 }.padding(.top, 60)
-                                .padding(.trailing,50)
+                                    .padding(.trailing,50)
                                 
                                 
-                            }       // HStack
-                            
-                        }   //vstack
+                            }
                 }       // overlay
 
                 
