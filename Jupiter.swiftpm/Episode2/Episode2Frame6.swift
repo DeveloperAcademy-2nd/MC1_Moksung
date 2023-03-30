@@ -34,8 +34,8 @@ struct Episode2Frame6: View {
                             HStack {
                                 Spacer()
                                 // button 클릭될 경우 text 변하도록 설정
-                                Button {
-                                    print("tapped")
+                                NavigationLink {
+                                    
                                 } label: {
                                     Label("NEXT", systemImage: "arrow")
                                 }
