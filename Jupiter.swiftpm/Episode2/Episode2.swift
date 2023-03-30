@@ -42,14 +42,6 @@ struct Episode2: View {
                 }
             }
     .background(Color.backgroundColor)
-        NavigationView {
-            NavigationLink {
-                Episode2Frame1()
-            } label: {
-                Text("NEXT")
-            }
-
-        }
 
     }
 }

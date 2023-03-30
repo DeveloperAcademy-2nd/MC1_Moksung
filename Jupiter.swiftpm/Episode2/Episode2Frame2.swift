@@ -19,19 +19,16 @@ struct Episode2Frame2: View {
                     .textField("우리는 결론을 도출하지 못하고, 결국 블랙보드 앞으로 향했다.")
                     .overlay {
                         VStack {
-                            Spacer()
                             HStack {
                                 Spacer()
                                 // button 클릭될 경우 text 변하도록 설정
                                 NavigationLink {
                                     Episode2Frame3()
                                 } label: {
-                                    Label("NEXT", systemImage: "arrow")
+                                    Label("다음", systemImage: "arrow")
                                 }
-                                .frame(width: 50, height: 30)
-                                .padding(.bottom, 100)
-                                .padding(.trailing, 35)
-                                
+                                .padding(.top, 60)
+                                .padding(.trailing,50)
                             }
                         }
                     }

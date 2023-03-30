@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Ep2Frame13: View {
-    @State var subtitle = "발표가 마무리 되고, 우리는 비로소 팀이 되었다!"
+    @State var subtitle = "발표가 무사히 마무리 되고, \n 우리는 비로소 팀이 되었다!\n \n - Episode 2 끝 -"
     @State var tag:Int? = nil
     
     var body: some View {
