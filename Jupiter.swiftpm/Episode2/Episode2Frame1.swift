@@ -27,10 +27,10 @@ struct Episode2Frame1: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .typeWriterField("시작은 아직 이안이 쌩쌩했던 23시,\n목성 최균함의 비상대책회의가 열린다.")
+                    .typeWriterField("시작은 아직 이안이 \n 쌩쌩했던 23시,\n목성 최균함의 \n비상대책회의가 열린다.")
                     .overlay {
                         VStack {
-//                            Spacer()
+                            //                            Spacer()
                             HStack {
                                 Spacer()
                                 // button 클릭될 경우 text 변하도록 설정
@@ -55,17 +55,17 @@ struct Episode2Frame1: View {
                                     }
                                     .padding(.top, 60)
                                     .padding(.trailing,50)
-                                                                
+                                    
+                                }
                             }
                         }
                     }
             }
+            .background(Color.backgroundColor)
+            .ignoresSafeArea(.all)
         }
-        .background(Color.backgroundColor)
-        .ignoresSafeArea(.all)
     }
 }
-
 struct Episode2Frame1_Previews: PreviewProvider {
     static var previews: some View {
         Episode2Frame1()

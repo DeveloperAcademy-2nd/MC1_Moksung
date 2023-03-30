@@ -54,14 +54,15 @@ struct Episode2Frame6: View {
                                     }
                                     .padding(.top, 60)
                                     .padding(.trailing,50)
-                                                                
+                                    
+                                }
                             }
                         }
                     }
             }
+            .background(Color.backgroundColor)
+            .ignoresSafeArea(.all)
         }
-        .background(Color.backgroundColor)
-        .ignoresSafeArea(.all)
     }
 }
 
