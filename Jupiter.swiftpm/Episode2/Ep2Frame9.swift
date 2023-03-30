@@ -28,11 +28,12 @@ struct Ep2Frame9: View {
                                 VStack {
                                     HStack{
                                         Spacer()
-                                        Button("장면 \(count+1) / 장면 2"){
+                                        Button("장면 \(count+1)/2"){
                                                 self.tag = 1
                                                 count += 1
                                         }.padding(.top, 60)
                                             .padding(.trailing,50)
+                                            .animation(.easeIn, value: count)
                                     }       // HStack
                                 }   //vstack
                             }       // overlay

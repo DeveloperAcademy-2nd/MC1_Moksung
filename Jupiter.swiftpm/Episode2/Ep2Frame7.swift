@@ -13,8 +13,10 @@ struct Ep2Frame7: View {
     @State var tag:Int? = nil
     @State var image = ["image_EP2_7_1", "image_EP2_7"]
     @State var count = 0
+//    @State var transitionView : Double = 0.0
     
     var body: some View {
+
             if count < 2 {
                 ZStack{
                     Image(image[count])
@@ -59,20 +61,20 @@ struct Ep2Frame7: View {
                                         }.padding(.top, 60)
                                             .padding(.trailing,50)
                                     }       // HStack
-                                    
-                                }   //vstack
-                            }       // overlay
-                    }
-                }        .ignoresSafeArea(.all)
-                    .background(Color.backgroundColor)
-            }
+
+                                
+                            }   //vstack
+                        }       // overlay
+                }
+            }        .ignoresSafeArea(.all)
+                .background(Color.backgroundColor)
+        }
     }
 }
-
-struct Ep2Frame7_Previews: PreviewProvider {
-    static var previews: some View {
-        Ep2Frame7()
+    
+    struct Ep2Frame7_Previews: PreviewProvider {
+        static var previews: some View {
+            Ep2Frame7()
+        }
     }
-}
-
-
+    

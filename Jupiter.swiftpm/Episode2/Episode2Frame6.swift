@@ -59,10 +59,10 @@ struct Episode2Frame6: View {
                             }
                         }
                     }
+                    .background(Color.backgroundColor)
+                    .ignoresSafeArea(.all)
             }
         }
-        .background(Color.backgroundColor)
-        .ignoresSafeArea(.all)
     }
 }
 
