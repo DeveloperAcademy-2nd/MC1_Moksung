@@ -18,7 +18,7 @@ extension Rectangle {
     func textField(_ text: String) -> some View {
         self
             .foregroundColor(.white)
-            .frame(height: 300)
+            .frame(height: 230)
             .padding(.bottom, 90)
             .padding(.leading, 20)
             .padding(.trailing, 20)
@@ -32,13 +32,12 @@ extension Rectangle {
                     .foregroundColor(.white)
                     .overlay(alignment: .center) {
                         Text(text)
-                            .font(.system(size: 30))
+                            .font(.system(size: 25))
                             .lineLimit(nil)
-
                             .multilineTextAlignment(.center)
                             .padding(.bottom, 100)
-                            .padding(.leading, 30)
-                            .padding(.trailing, 30)
+                            .padding(.leading, 40)
+                            .padding(.trailing, 40)
                             .padding(.top, 10)
             }
         }
@@ -47,7 +46,7 @@ extension Rectangle {
     func subtitleRectangle() -> some View {
         self
             .foregroundColor(.white)
-            .frame(height: 300)
+            .frame(height: 230)
             .padding(.leading, 20)
             .padding(.trailing, 20)
             .padding(.bottom, 90)

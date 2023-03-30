@@ -32,7 +32,11 @@ struct Ep3Frame2: View {
                     }
                 }
             } label: {
-                Image("Frame1")
+                if index == 2 {
+                    Image("joon1")
+                } else {
+                    Image("Frame1")
+                }
             }
             
             VStack {
@@ -55,11 +59,19 @@ struct Ep3Frame2: View {
                                 Spacer()
 
                                 Button(action: {
-                                    withAnimation(.easeIn) {
-                                        if index < conversationDesign.count - 1 {
-                                            index += 1
+                                    if index < conversationDesign.count - 1 {
+                                        
+                                        if index == 1 {
+                                            withAnimation(.easeIn(duration: 2)) {
+                                                index += 1
+                                            }
+                                        } else {
+                                            withAnimation(.easeIn) {
+                                                index += 1
+                                            }
                                         }
                                     }
+                                    
                                 }, label: {
                                     Text("NEXT")
                                 })
@@ -90,14 +102,16 @@ struct LeftSubtitleTop: View {
     @Binding var conversationDesign: ConversationDesign
     
     var body: some View {
-        HStack(alignment: .top) {
-            
+        HStack(alignment: .top, spacing: 0) {
+//                .foregroundColor(.black)
             Image(conversationDesign.image)
                 .resizable()
-                .padding(.leading, 20)
-                .frame(width: 130, height: 150)
+                .frame(width: 100, height: 105)
+                .padding(.top, 5)
+                .padding(.leading, 25)
+//                .background(.green)
             Text(conversationDesign.nickname)
-                .font(.system(size: 40))
+                .font(.system(size: 30))
 //                .multilineTextAlignment(.leading)
                 .lineLimit(1)
                 .padding(.top, 40)
@@ -123,12 +137,13 @@ struct LeftSubtitleMiddle: View {
     var body: some View {
         HStack(alignment: .top) {
             Spacer()
-            Text(conversationDesign.conversation)
-                .font(.system(size: 36))
+            TyperWriterView(finalText: conversationDesign.conversation)
+                .font(.system(size: 20))
                 .lineLimit(nil)
                 .multilineTextAlignment(.center)
                 .padding(.leading, 40)
                 .padding(.trailing, 40)
+        
             Spacer()
         }
     }
@@ -139,16 +154,18 @@ struct RightSubtitleTop: View {
     @Binding var conversationDesign: ConversationDesign
     
     var body: some View {
-        HStack(alignment: .top) {
+        HStack(alignment: .top, spacing: 0) {
             Spacer()
             Text(conversationDesign.nickname)
-                .font(.system(size: 40))
+                .font(.system(size: 30))
                 .multilineTextAlignment(.leading)
                 .padding(.top, 40)
             Image(conversationDesign.image)
                 .resizable()
+                .frame(width: 100, height: 105)
+                .padding(.top, 5)
                 .padding(.trailing, 20)
-                .frame(width: 130, height: 150)
+                
             // 가로 Spacer()
             
         }
@@ -162,8 +179,8 @@ struct RightSubtitleMiddle: View {
     var body: some View {
         HStack(alignment: .top) {
             Spacer()
-            Text(conversationDesign.conversation)
-                .font(.system(size: 36))
+            TyperWriterView(finalText: conversationDesign.conversation)
+                .font(.system(size: 20))
                 .lineLimit(nil)
                 .padding(.leading, 40)
                 .padding(.trailing, 40)

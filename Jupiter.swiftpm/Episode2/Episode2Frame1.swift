@@ -37,7 +37,7 @@ struct Episode2Frame1: View {
                                 NavigationLink {
                                     Episode2Frame2()
                                 } label: {
-                                    Label("NEXT", systemImage: "arrow")
+                                    Text("NEXT")
                                 }
                                 .frame(width: 50, height: 30)
                                 .padding(.bottom, 100)
