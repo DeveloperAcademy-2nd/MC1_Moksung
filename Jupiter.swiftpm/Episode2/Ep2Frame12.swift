@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Ep2Frame12: View {
-    @State var subtitle = "멘토의 질문에 모두가 필사의 디펜스를 펼쳤다."
+    @State var subtitle = "멘토의 질문에 모두가 \n 필사의 디펜스를 펼쳤다."
     @State var tag:Int? = nil
     @State var image = ["image_EP2_12_1", "image_EP2_12_2", "image_EP2_12_3", "image_EP2_12" ]
     @State var count = 0
