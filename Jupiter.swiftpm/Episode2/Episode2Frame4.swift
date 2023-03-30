@@ -17,7 +17,7 @@ struct Episode2Frame4: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .textField("코지는 참지못하고, 해결책을 찾기 위해 게릴라 인터뷰를 진행한다.")
+                    .textField("코지는 이 상황을 참지 못 하고, 문제를 해결하기 위해 게릴라 인터뷰를 진행한다.")
                     .overlay {
                         VStack {
                             HStack {
@@ -26,10 +26,7 @@ struct Episode2Frame4: View {
                                 NavigationLink {
                                     Episode2Frame5()
                                 } label: {
-                                    HStack {
-                                        Text("다음")
-                                        Image(systemName: "arrow.right")
-                                    }
+                                    Text("다음")
                                 }
                                 .padding(.top, 60)
                                 .padding(.trailing,50)

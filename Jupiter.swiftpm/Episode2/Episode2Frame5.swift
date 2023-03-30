@@ -27,7 +27,7 @@ struct Episode2Frame5: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .textField("인터뷰씬")
+                    .textField("인터뷰 하는 중...")
                     .overlay {
                         VStack {
                             HStack {
@@ -47,10 +47,7 @@ struct Episode2Frame5: View {
                                     NavigationLink {
                                         Episode2Frame6()
                                     } label: {
-                                        HStack {
-                                            Text("다음")
-                                            Image(systemName: "arrow.right")
-                                        }
+                                        Text("다음")
                                     }
                                     .padding(.top, 60)
                                     .padding(.trailing,50)

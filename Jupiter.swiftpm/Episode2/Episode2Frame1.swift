@@ -48,10 +48,7 @@ struct Episode2Frame1: View {
                                     NavigationLink {
                                         Episode2Frame2()
                                     } label: {
-                                        HStack {
-                                            Text("다음")
-                                            Image(systemName: "arrow.right")
-                                        }
+                                        Text("다음")
                                     }
                                     .padding(.top, 60)
                                     .padding(.trailing,50)

@@ -16,7 +16,7 @@ struct Episode2Frame2: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .textField("우리는 결론을 도출하지 못하고, 결국 블랙보드 앞으로 향했다.")
+                    .textField("우리는 결론을 도출하지 못했고, 결국 블랙보드 앞으로 향했다.")
                     .overlay {
                         VStack {
                             HStack {
@@ -25,7 +25,7 @@ struct Episode2Frame2: View {
                                 NavigationLink {
                                     Episode2Frame3()
                                 } label: {
-                                    Label("다음", systemImage: "arrow")
+                                    Text("다음")
                                 }
                                 .padding(.top, 60)
                                 .padding(.trailing,50)
