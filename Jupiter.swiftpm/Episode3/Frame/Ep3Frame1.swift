@@ -10,9 +10,9 @@ import SwiftUI
 struct Ep3Frame1: View {
     
     @State var design: [Design] = [
-        Design(image: "Frame1", subtitle: "우리는 전투를 끝내고, 회식을 진행했다. 1차는 맘스터치였다."),
-        Design(image: "Frame2", subtitle: "서로 고생했다며 이야기를 이어가는 중에, 우리는 평소처럼 유사과학 이야기를 진행했다."),
-        Design(image: "Frame3", subtitle: "섀넌은 갑자기 '딸은 아버지를 닮고, 아들은 어머니를 닮는대요. 제가 그 증거에요!' 라고 했다.")
+        Design(image: "Frame1", subtitle: "우리는 전투를 끝내고, 회식을 진행했다.\n 1차는 맘스터치였다."),
+        Design(image: "Frame2", subtitle: "서로 고생했다며\n이야기를 이어가는 중에, 우리는 평소처럼\n유사과학 이야기를 했다."),
+        Design(image: "Frame3", subtitle: "섀넌은\n\"딸은 아버지를 닮고,\n아들은 어머니를 닮는대요.\n제가 그 증거에요!\" 라고 했다.")
     ]
     
     @State var index = 0

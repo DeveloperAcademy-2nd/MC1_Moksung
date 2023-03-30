@@ -55,7 +55,6 @@ struct Episode2Frame1: View {
                                     }
                                     .padding(.top, 60)
                                     .padding(.trailing,50)
-                                }
                                                                 
                             }
                         }
