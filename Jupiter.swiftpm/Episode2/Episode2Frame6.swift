@@ -27,7 +27,7 @@ struct Episode2Frame6: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .textField("성공적인 게릴라 인터뷰를 통해, 우리는 시간과 공간의 블랙보드에서 빠져나오게 됨.")
+                    .textField("인터뷰로 해결책을 얻게 되어, 우리는 시간과 정신의 블랙보드에서 빠져나오게 되었다.")
                     .overlay {
                         VStack {
                             HStack {
@@ -47,10 +47,7 @@ struct Episode2Frame6: View {
                                     NavigationLink {
                                         Ep2Frame7()
                                     } label: {
-                                        HStack {
-                                            Text("다음")
-                                            Image(systemName: "arrow.right")
-                                        }
+                                        Text("다음")
                                     }
                                     .padding(.top, 60)
                                     .padding(.trailing,50)
