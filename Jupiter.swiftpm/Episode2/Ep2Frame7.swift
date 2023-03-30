@@ -16,66 +16,58 @@ struct Ep2Frame7: View {
 //    @State var transitionView : Double = 0.0
     
     var body: some View {
-        if count < 2 {
-            ZStack{
-                Image(image[count])
-//                    .opacity(transitionView)
-//                    .animation(.easeIn(duration: 2), value: count)
-                VStack {
-                    Spacer()
-                    Rectangle()
-                        .textField(subtitle)
-                        .multilineTextAlignment(.center)
-                        .overlay {
-                            VStack {
-                                HStack{
-                                    Spacer()
-                                    Button("장면 \(count+1)/2"){
-                                        self.tag = 1
-                                        count += 1
-                                    }.padding(.top, 60)
-                                        .padding(.trailing,50)
-                                        .animation(.easeIn, value: count)
-                                }       // HStack
-                            }   //vstack
-                        }       // overlay
-                }
-            }        .ignoresSafeArea(.all)
-                .background(Color.backgroundColor)
-//                .onAppear {
-//                    transitionView = 1.0
-//                }
-        }else{
-            ZStack{
-                Image("image_EP2_7")
-//                    .opacity(transitionView)
-//                    .animation(.easeIn(duration: 2), value: count)
-                VStack {
-                    Spacer()
-                    Rectangle()
-                        .textField(subtitle)
-                        .multilineTextAlignment(.center)
-                        .overlay {
-                            VStack {
-                                HStack{
-                                    Spacer()
-                                    NavigationLink(
-                                        destination: Ep2Frame8(), tag : 1, selection: self.$tag){}
-                                    
-                                    Button("다음"){
-                                        self.tag = 1
-                                    }.padding(.top, 60)
-                                        .padding(.trailing,50)
-                                }       // HStack
+
+            if count < 2 {
+                ZStack{
+                    Image(image[count])
+                        .animation(.easeIn, value: count)
+                    VStack {
+                        Spacer()
+                        Rectangle()
+                            .textField(subtitle)
+                            .multilineTextAlignment(.center)
+                            .overlay {
+                                VStack {
+                                    HStack{
+                                        Spacer()
+                                        Button("장면 \(count+1) / 장면 2"){
+                                                self.tag = 1
+                                                count += 1
+                                        }.padding(.top, 60)
+                                            .padding(.trailing,50)
+                                    }       // HStack
+                                }   //vstack
+                            }       // overlay
+                    }
+                }        .ignoresSafeArea(.all)
+                    .background(Color.backgroundColor)
+            }else{
+                ZStack{
+                    Image("image_EP2_7")
+                    VStack {
+                        Spacer()
+                        Rectangle()
+                            .textField(subtitle)
+                            .multilineTextAlignment(.center)
+                            .overlay {
+                                VStack {
+                                    HStack{
+                                        Spacer()
+                                        NavigationLink(
+                                            destination: Ep2Frame8(), tag : 1, selection: self.$tag){}
+                                        
+                                        Button("다음"){
+                                            self.tag = 1
+                                        }.padding(.top, 60)
+                                            .padding(.trailing,50)
+                                    }       // HStack
+
                                 
                             }   //vstack
                         }       // overlay
                 }
             }        .ignoresSafeArea(.all)
                 .background(Color.backgroundColor)
-//                .onAppear {
-//                    transitionView = 1.0
-//                }
         }
     }
 }
