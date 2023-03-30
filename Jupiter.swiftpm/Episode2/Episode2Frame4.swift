@@ -20,18 +20,19 @@ struct Episode2Frame4: View {
                     .textField("코지는 참지못하고, 해결책을 찾기 위해 게릴라 인터뷰를 진행한다.")
                     .overlay {
                         VStack {
-                            Spacer()
                             HStack {
                                 Spacer()
                                 // button 클릭될 경우 text 변하도록 설정
                                 NavigationLink {
                                     Episode2Frame5()
                                 } label: {
-                                    Label("NEXT", systemImage: "arrow")
+                                    HStack {
+                                        Text("다음")
+                                        Image(systemName: "arrow.right")
+                                    }
                                 }
-                                .frame(width: 50, height: 30)
-                                .padding(.bottom, 100)
-                                .padding(.trailing, 35)
+                                .padding(.top, 60)
+                                .padding(.trailing,50)
                                 
                             }
                         }
