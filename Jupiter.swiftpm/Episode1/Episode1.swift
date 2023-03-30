@@ -20,7 +20,7 @@ struct Episode1: View {
                     NavigationLink(destination: Ep1Frame1(),
                                    label: {
                         Text("다음")
-                            .padding(.top,540)
+                            .padding(.top,610)
                             .padding(.trailing,50)
                     })
                     

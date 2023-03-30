@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Ep1Frame6: View {
-    @State var subtitle = "리이오(도미노 장인) “잘하고 있네?ㅎ 무너트려볼까?ㅎ”"
+    @State var subtitle = "'잘하고 있네?ㅎ\n무너트려볼까?ㅎ'"
     @State var tag:Int? = nil
     @State private var index = 0
     
@@ -23,15 +23,23 @@ struct Ep1Frame6: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .typeWriterField(subtitle)
-                    .multilineTextAlignment(.center)
-                    .overlay {
+                    .typeWriterField(subtitle)                    .overlay {
                             HStack{
                                 Spacer()
                                 NavigationLink(
                                     destination: Ep1Frame7(), tag : 1, selection: self.$tag){}
-                                
-                                
+                                ZStack{
+                                    Image("lio")
+                                        .resizable()
+                                        .frame(width: 240, height: 130)
+                                        .padding(.bottom,300)
+                                        .padding(.leading,30)
+                                    Image("leeo")
+                                        .resizable()
+                                        .frame(width:130,height: 160)
+                                        .padding(.bottom,300)
+                                        .padding(.leading,56)
+                                }
                                 Button("다음\(index+1)/\(images.count)"){
                                     if(index == images.count-1){
                                         self.tag = 1

@@ -9,7 +9,7 @@ import SwiftUI
 import AVKit
 
 struct Ep1Frame9: View {
-    @State var subtitle = "야생의 링고-사야(이)가 피드백을 걸어왔다!"
+    @State var subtitle = "야생의 링고-사야(이)가\n피드백을 걸어왔다!"
     @State var tag:Int? = nil
     @State private var index = 0
     

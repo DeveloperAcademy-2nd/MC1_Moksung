@@ -26,7 +26,7 @@ extension Rectangle {
 //                            .lineLimit(nil)
 //                            .padding(.all, 40)
             .foregroundColor(.white)
-            .frame(height: 300)
+            .frame(height: 230)
             .padding(.leading, 20)
             .padding(.trailing, 20)
             .padding(.bottom, 90)
@@ -40,7 +40,7 @@ extension Rectangle {
                     .foregroundColor(.white)
                     .overlay(alignment: .center) {
                         TyperWriterView(finalText: text)
-                            .font(.system(size: 40))
+                            .font(.system(size: 25))
                             .lineLimit(nil)
                             .multilineTextAlignment(.center)
                             .padding(.bottom, 100)
