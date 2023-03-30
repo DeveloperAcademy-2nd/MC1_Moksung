@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct Episode1: View {
     var body: some View {
