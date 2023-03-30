@@ -27,15 +27,15 @@ struct Episode2Frame5: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .textField("시작은 아직 이안이 쌩쌩했던 23시,\n목성 최균함의 비상대책회의가 열린다.")
+                    .textField("인터뷰씬")
                     .overlay {
                         VStack {
                             Spacer()
                             HStack {
                                 Spacer()
                                 // button 클릭될 경우 text 변하도록 설정
-                                Button {
-                                    print("tapped")
+                                NavigationLink {
+                                    Episode2Frame6()
                                 } label: {
                                     Label("NEXT", systemImage: "arrow")
                                 }
