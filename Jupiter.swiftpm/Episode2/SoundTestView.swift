@@ -18,6 +18,7 @@ struct SoundTestView: View {
                 SoundSetting.soundPlayer.play(fileName: "birds")
             }
         }
+        .onDisappear(perform:SoundSetting.soundPlayer.stop )
     }
 }
 

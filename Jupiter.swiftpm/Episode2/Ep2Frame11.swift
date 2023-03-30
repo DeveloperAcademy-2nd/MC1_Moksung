@@ -18,6 +18,7 @@ struct Ep2Frame11: View {
             if count < 2 {
                 ZStack{
                     Image(image[count])
+                        .animation(.easeIn, value: count)
                     VStack {
                         Spacer()
                         Rectangle()
