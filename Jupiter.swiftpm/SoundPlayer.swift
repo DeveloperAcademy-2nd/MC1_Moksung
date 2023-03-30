@@ -11,7 +11,6 @@ import AVFoundation
 
 class SoundSetting: ObservableObject {
     static let soundPlayer = SoundSetting()
-    static var sounds = [String]()
     
     var player: AVAudioPlayer?
     
@@ -27,6 +26,9 @@ class SoundSetting: ObservableObject {
         } catch let error {
             print(error.localizedDescription)
         }
-        
+    }
+    
+    func stop() {
+        player?.stop()
     }
 }
