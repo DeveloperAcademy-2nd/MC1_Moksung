@@ -23,7 +23,7 @@ struct Ep1Frame3: View {
                     
                     Button("다음"){
                         self.tag = 1
-                    }.padding(.bottom, 160)
+                    }.padding(.bottom, 120)
                     .padding(.trailing,50)
                     
                     

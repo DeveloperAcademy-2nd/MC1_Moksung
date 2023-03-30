@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Ep1Frame2: View {
-    @State var subtitle = "눈부신 미래가 그려지는 듯 하다"
+    @State var subtitle = "눈부신 미래가 그려지는 듯 하다."
     @State var tag:Int? = nil
     @State private var index = 0
     
@@ -20,7 +20,7 @@ struct Ep1Frame2: View {
                 Spacer()
                     ZStack{
                     Rectangle()
-                        .typeWriterField(subtitle)
+                        .textField(subtitle)
                         .multilineTextAlignment(.center)
                         .overlay {
                                 HStack{
