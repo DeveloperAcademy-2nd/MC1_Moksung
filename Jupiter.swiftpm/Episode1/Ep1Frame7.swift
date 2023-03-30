@@ -17,10 +17,9 @@ struct Ep1Frame7: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .textField(subtitle)
+                    .typeWriterField(subtitle)
                     .multilineTextAlignment(.center)
                     .overlay {
-                        VStack {
                             HStack{
                                 Spacer()
                                 NavigationLink(
@@ -34,8 +33,6 @@ struct Ep1Frame7: View {
                                 
                                 
                             }       // HStack
-                            
-                        }   //vstack
                 }       // overlay
 
                 

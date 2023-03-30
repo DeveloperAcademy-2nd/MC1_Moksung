@@ -10,18 +10,19 @@ import SwiftUI
 struct Ep1Frame2: View {
     @State var subtitle = "눈부신 미래가 그려지는 듯 하다"
     @State var tag:Int? = nil
+    @State private var index = 0
+    
     var body: some View {
         
         ZStack {
-            Image("1-2")
+            Image("1-2-2")
             VStack {
                 Spacer()
                     ZStack{
                     Rectangle()
-                        .textField(subtitle)
+                        .typeWriterField(subtitle)
                         .multilineTextAlignment(.center)
                         .overlay {
-                            VStack {
                                 HStack{
                                     Spacer()
                                     NavigationLink(
@@ -29,14 +30,13 @@ struct Ep1Frame2: View {
                                     
                                     
                                     Button("다음"){
-                                        self.tag = 1
+                                        
+                                            self.tag = 1
                                     }.padding(.top, 60)
-                                    .padding(.trailing,50)
+                                        .padding(.trailing,50)
                                     
                                     
                                 }       // HStack
-                                
-                            }   //vstack
                             }   // overlay
                             
                     

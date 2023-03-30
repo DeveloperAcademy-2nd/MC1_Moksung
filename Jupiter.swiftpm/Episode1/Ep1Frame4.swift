@@ -10,32 +10,39 @@ import SwiftUI
 struct Ep1Frame4: View {
     @State var subtitle = "열심히 Our Challenge로 접근 하는 중"
     @State var tag:Int? = nil
+    @State private var index = 0
+    
+    let images = ["1-4-1", "1-4-2", "1-4-3"]
     var body: some View {
         
         ZStack {
-            Image("1-4")
+            Image(images[index])
+                .animation(.easeIn, value: index)
+            
+            
             VStack {
                 Spacer()
                 Rectangle()
-                    .textField(subtitle)
+                    .typeWriterField(subtitle)
                     .multilineTextAlignment(.center)
                     .overlay {
-                        VStack {
                             HStack{
                                 Spacer()
                                 NavigationLink(
                                     destination: Ep1Frame5(), tag : 1, selection: self.$tag){}
                                 
                                 
-                                Button("다음"){
-                                    self.tag = 1
+                                Button("다음\(index+1)/\(images.count)"){
+                                    if(index == images.count-1){
+                                        self.tag = 1
+                                    } else {
+                                        index += 1
+                                    }
                                 }.padding(.top, 60)
                                 .padding(.trailing,50)
                                 
                                 
                             }       // HStack
-                            
-                        }   //vstack
                 }       // overlay
 
                 

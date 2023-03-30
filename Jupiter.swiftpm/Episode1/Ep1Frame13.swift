@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Ep1Frame13: View {
-    @State var subtitle = "다시 눈부신 미래를 꿈꾸기 위해 MC1에 집중했다. 이젠 끝이겠지.."
+    @State var subtitle = "다시 눈부신 미래를 꿈꾸기 위해 MC1에 집중했다\n이젠 끝이겠지.."
     @State var tag:Int? = nil
     var body: some View {
         
@@ -17,10 +17,9 @@ struct Ep1Frame13: View {
             VStack {
                 Spacer()
                 Rectangle()
-                    .textField(subtitle)
+                    .typeWriterField(subtitle)
                     .multilineTextAlignment(.center)
                     .overlay {
-                        VStack {
                             HStack{
                                 Spacer()
                                 NavigationLink(
@@ -34,8 +33,6 @@ struct Ep1Frame13: View {
                                 
                                 
                             }       // HStack
-                            
-                        }   //vstack
                 }       // overlay
 
                 
