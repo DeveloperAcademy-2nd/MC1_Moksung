@@ -2,18 +2,18 @@
 //  SwiftUIView.swift
 //  
 //
-//  Created by semini on 2023/03/29.
+//  Created by semini on 2023/03/30.
 //
 
 import SwiftUI
 
-struct Ep2Frame8: View {
-    @State var subtitle = "맨 처음 순서로 발표를 하고 싶었지만, 가장 마지막 순서로 진행하게 되었다..."
+struct Ep2Frame11: View {
+    @State var subtitle = "하지만 우리는 어제의 비상대책회의를 통한 \'뉴런공유\'가 되어 있었고, "
     @State var tag:Int? = nil
     
     var body: some View {
         ZStack {
-            Image("image_EP2_8")
+            Image("image_EP2_11")
             VStack {
                 Spacer()
                 Rectangle()
@@ -24,7 +24,7 @@ struct Ep2Frame8: View {
                             HStack{
                                 Spacer()
                                 NavigationLink(
-                                    destination: Ep2Frame9(), tag : 1, selection: self.$tag){}
+                                    destination: Ep2Frame12(), tag : 1, selection: self.$tag){}
   
                                 Button("다음"){
                                     self.tag = 1
@@ -43,8 +43,9 @@ struct Ep2Frame8: View {
     }
 }
 
-struct Ep2Frame8_Previews: PreviewProvider {
+
+struct Ep2Frame11_Previews: PreviewProvider {
     static var previews: some View {
-        Ep2Frame8()
+        Ep2Frame11()
     }
 }
