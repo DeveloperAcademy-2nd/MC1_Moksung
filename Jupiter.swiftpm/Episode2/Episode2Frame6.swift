@@ -30,20 +30,31 @@ struct Episode2Frame6: View {
                     .textField("성공적인 게릴라 인터뷰를 통해, 우리는 시간과 공간의 블랙보드에서 빠져나오게 됨.")
                     .overlay {
                         VStack {
-                            Spacer()
                             HStack {
                                 Spacer()
                                 // button 클릭될 경우 text 변하도록 설정
-                                NavigationLink {
-                                    Ep2Frame7()
-                                    
-                                } label: {
-                                    Label("NEXT", systemImage: "arrow")
-                                }
-                                .frame(width: 50, height: 30)
-                                .padding(.bottom, 100)
-                                .padding(.trailing, 35)
-                                .disabled(index<images.count-1)
+                                if index < images.count-1 {
+                                    Button {
+                                        withAnimation {
+                                            index += 1
+                                        }
+                                    } label: {
+                                        Text("장면 \(index+1)/\(images.count)")
+                                    }
+                                    .padding(.top, 60)
+                                    .padding(.trailing,50)
+                                } else {
+                                    NavigationLink {
+                                        Ep2Frame7()
+                                    } label: {
+                                        HStack {
+                                            Text("다음")
+                                            Image(systemName: "arrow.right")
+                                        }
+                                    }
+                                    .padding(.top, 60)
+                                    .padding(.trailing,50)
+                                                                
                             }
                         }
                     }

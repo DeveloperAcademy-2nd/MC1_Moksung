@@ -30,21 +30,32 @@ struct Episode2Frame5: View {
                     .textField("인터뷰씬")
                     .overlay {
                         VStack {
-                            Spacer()
                             HStack {
                                 Spacer()
                                 // button 클릭될 경우 text 변하도록 설정
-                                NavigationLink {
-                                    Episode2Frame6()
-                                } label: {
-                                    Label("NEXT", systemImage: "arrow")
+                                if index < images.count-1 {
+                                    Button {
+                                        withAnimation {
+                                            index += 1
+                                        }
+                                    } label: {
+                                        Text("장면 \(index+1)/\(images.count)")
+                                    }
+                                    .padding(.top, 60)
+                                    .padding(.trailing,50)
+                                } else {
+                                    NavigationLink {
+                                        Episode2Frame6()
+                                    } label: {
+                                        HStack {
+                                            Text("다음")
+                                            Image(systemName: "arrow.right")
+                                        }
+                                    }
+                                    .padding(.top, 60)
+                                    .padding(.trailing,50)
                                 }
-                                .frame(width: 50, height: 30)
-                                .padding(.bottom, 100)
-                                .padding(.trailing, 35)
-                                .disabled(index<images.count-1)
-                                
-                                
+                                                                
                             }
                         }
                     }
