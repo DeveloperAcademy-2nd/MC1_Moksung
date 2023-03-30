@@ -59,11 +59,11 @@ struct Episode2Frame1: View {
                                 }
                             }
                         }
-                    }
-                    .background(Color.backgroundColor)
-                    .ignoresSafeArea(.all)
+                    }       
             }
         }
+        .background(Color.backgroundColor)
+        .ignoresSafeArea(.all)
     }
 }
 struct Episode2Frame1_Previews: PreviewProvider {
