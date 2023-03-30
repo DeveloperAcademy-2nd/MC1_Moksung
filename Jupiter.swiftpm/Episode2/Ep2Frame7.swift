@@ -41,7 +41,6 @@ struct Ep2Frame7: View {
                     }
                 }        .ignoresSafeArea(.all)
                     .background(Color.backgroundColor)
-                    .onAppear(perform: playSoundEp2Frame7)
                     
             }else{
                 ZStack{
