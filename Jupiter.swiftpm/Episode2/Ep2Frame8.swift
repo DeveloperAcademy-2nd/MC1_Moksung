@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Ep2Frame8: View {
-    @State var subtitle = "맨 처음 순서로 발표를 하고 싶었지만, 가장 마지막 순서로 진행하게 되었다..."
+    @State var subtitle = "맨 처음 순서로 발표를 하고 싶었지만, \n 가장 마지막 순서로 발표를 진행하게 되었다..."
     @State var tag:Int? = nil
     
     var body: some View {
