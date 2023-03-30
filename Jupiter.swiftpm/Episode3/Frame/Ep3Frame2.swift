@@ -73,6 +73,7 @@ struct Ep3Frame2: View {
         }
         .background(Color.backgroundColor)
         .ignoresSafeArea(.all)
+
     }
 }
 
