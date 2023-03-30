@@ -30,7 +30,7 @@ struct Episode2Frame1: View {
                     .typeWriterField("시작은 아직 이안이 쌩쌩했던 23시,\n목성 최균함의 비상대책회의가 열린다.")
                     .overlay {
                         VStack {
-//                            Spacer()
+                            //                            Spacer()
                             HStack {
                                 Spacer()
                                 // button 클릭될 경우 text 변하도록 설정
@@ -55,7 +55,8 @@ struct Episode2Frame1: View {
                                     }
                                     .padding(.top, 60)
                                     .padding(.trailing,50)
-                                                                
+                                    
+                                }
                             }
                         }
                     }
