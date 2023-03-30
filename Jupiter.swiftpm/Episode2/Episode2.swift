@@ -11,6 +11,7 @@ struct Episode2: View {
     @State var tag:Int? = nil
     
     var body: some View {
+<<<<<<< Updated upstream
     ZStack(alignment: .bottom){
         VStack {
             Spacer()
@@ -42,6 +43,16 @@ struct Episode2: View {
                 }
             }
     .background(Color.backgroundColor)
+=======
+        NavigationView {
+            NavigationLink {
+                Episode2Frame1()
+            } label: {
+                Text("NEXT")
+            }
+
+        }
+>>>>>>> Stashed changes
     }
 }
 
