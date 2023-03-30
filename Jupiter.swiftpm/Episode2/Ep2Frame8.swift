@@ -8,12 +8,38 @@
 import SwiftUI
 
 struct Ep2Frame8: View {
+    @State var subtitle = "맨 처음 순서로 발표를 하고 싶었지만, \n 가장 마지막 순서로 발표를 진행하게 되었다..."
+    @State var tag:Int? = nil
+    
     var body: some View {
-        Text("The End.")
-            .foregroundColor(.white)
-            .font(.title)
-            .background(Color.backgroundColor)
+        ZStack {
+            Image("image_EP2_8")
+            VStack {
+                Spacer()
+                Rectangle()
+                    .textField(subtitle)
+                    .multilineTextAlignment(.center)
+                    .overlay {
+                        VStack {
+                            HStack{
+                                Spacer()
+                                NavigationLink(
+                                    destination: Ep2Frame9(), tag : 1, selection: self.$tag){}
+  
+                                Button("다음"){
+                                    self.tag = 1
+                                }.padding(.top, 60)
+                                .padding(.trailing,50)
+                            }       // HStack
+                            
+                        }   //vstack
+                }       // overlay
+
+            }       // vstack
             
+        }           // zstack
+        .ignoresSafeArea(.all)
+        .background(Color.backgroundColor)
     }
 }
 

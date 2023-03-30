@@ -39,6 +39,7 @@ extension Rectangle {
                             .padding(.leading, 40)
                             .padding(.trailing, 40)
                             .padding(.top, 10)
+
             }
         }
     }

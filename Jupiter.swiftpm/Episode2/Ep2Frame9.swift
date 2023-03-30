@@ -2,17 +2,17 @@
 //  SwiftUIView.swift
 //  
 //
-//  Created by semini on 2023/03/29.
+//  Created by semini on 2023/03/30.
 //
 
 import SwiftUI
 
-struct Ep2Frame7: View {
-    
-    @State var subtitle = "발표날 아침, 우리는 어제의 고생 덕분에 자신만만하게 입장했다."
+struct Ep2Frame9: View {
+    @State var subtitle = "드디어 기다리던 발표 순서가 되었는데, 멘토 군단이 우리팀에 관심을 갖고 집중하기 시작했다."
     @State var tag:Int? = nil
-    @State var image = ["image_EP2_7_1", "image_EP2_7"]
+    @State var image = ["image_EP2_9_1", "image_EP2_9_2"]
     @State var count = 0
+    
     
     var body: some View {
             if count < 2 {
@@ -40,7 +40,7 @@ struct Ep2Frame7: View {
                     .background(Color.backgroundColor)
             }else{
                 ZStack{
-                    Image("image_EP2_7")
+                    Image("image_EP2_9_2")
                     VStack {
                         Spacer()
                         Rectangle()
@@ -51,7 +51,7 @@ struct Ep2Frame7: View {
                                     HStack{
                                         Spacer()
                                         NavigationLink(
-                                            destination: Ep2Frame8(), tag : 1, selection: self.$tag){}
+                                            destination: Ep2Frame10(), tag : 1, selection: self.$tag){}
                                         
                                         Button("다음"){
                                             self.tag = 1
@@ -68,10 +68,8 @@ struct Ep2Frame7: View {
     }
 }
 
-struct Ep2Frame7_Previews: PreviewProvider {
+struct Ep2Frame9_Previews: PreviewProvider {
     static var previews: some View {
-        Ep2Frame7()
+        Ep2Frame9()
     }
 }
-
-
