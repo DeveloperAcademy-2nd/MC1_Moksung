@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct Episode2Frame1: View {
-    @State private var nxtSwitch = false
-    
     let images = ["2_1_1", "2_1_2"]
+    
     @State private var index = 0
     
     var body: some View {
@@ -35,9 +34,8 @@ struct Episode2Frame1: View {
                             HStack {
                                 Spacer()
                                 // button 클릭될 경우 text 변하도록 설정
-                                Button {
-                                    nxtSwitch = true
-                                    print("tapped")
+                                NavigationLink {
+                                    Episode2Frame2()
                                 } label: {
                                     Label("NEXT", systemImage: "arrow")
                                 }
