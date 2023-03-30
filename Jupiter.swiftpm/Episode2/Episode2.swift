@@ -18,7 +18,7 @@ struct Episode2: View {
                 .textField("에피소드 2")
                 .overlay {
                     NavigationLink(
-                        destination: Ep2Frame7(),
+                        destination: Episode2Frame1(),
                         tag : 1, selection: self.$tag ){
                             EmptyView()
                         }
@@ -42,6 +42,7 @@ struct Episode2: View {
                 }
             }
     .background(Color.backgroundColor)
+
     }
 }
 
